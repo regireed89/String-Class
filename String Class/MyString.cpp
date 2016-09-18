@@ -32,7 +32,7 @@ void MyString::Print()
 	// 
 	for (int i = 0; i < Length(); i++)
 	{
-		cout << m_string[i] << endl;
+		cout << m_string[i]<<endl;
 	}
 
 
@@ -48,7 +48,7 @@ char MyString::Compare()
 		{
 			if (Comp[i] == m_string[i])
 			{
-				cout << i << endl;
+				cout << i;
 			}
 			else
 			{
@@ -63,14 +63,14 @@ char MyString::Append()
 {
 
 	char App[5] = "poop";
-	char Connect;
-	for (int i = 0; i < Length(); i++)
+	char i;
+	for (i = 0; i < Length(); i++)
 	{
-		Connect = App[i] + m_string[i];
-		cout << Connect << endl;
+		App[i] + m_string[i];
+		cout << i;
 	}
 
 
-	return Connect;
+	return i;
 }
 
