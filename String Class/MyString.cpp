@@ -59,10 +59,18 @@ char MyString::Compare()
 	return i;
 }
 
-char MyString::StrAppend()
+char MyString::Append()
 {
 
+	char App[5] = "poop";
+	char Connect;
+	for (int i = 0; i < Length(); i++)
+	{
+		Connect = App[i] + m_string[i];
+		cout << Connect << endl;
+	}
 
-	return 0;
+
+	return Connect;
 }
 

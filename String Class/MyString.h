@@ -16,31 +16,31 @@ public:
 	char Compare();
 
 	//append one string to another
-	char StrAppend();
+	char Append();
 
 	//prepend one string to another
-	char StrPrepend();
+	char Prepend();
 
 	//return basic constant C-style string
-	char StrReturn();
+	char Return();
 
 	//convert string top lowercase
-	char StrConvertLow();
+	char ConvertLow();
 
 	//convert strin gto uppercase
-	char StrConvertUp();
+	char ConvertUp();
 
 	//find sub string
-	char StrSub();
+	char Sub();
 
 	//find sub-string starting at a certain index
-	char StrSubCI();
+	char SubCI();
 
 	//replace sub-string with another sub string
-	char StrReplaceSub();
+	char ReplaceSub();
 
 	//set string to an input C-style string
-	char StrSetCstyle();
+	char SetCStyle();
 
 private:
 	char m_string[255];
