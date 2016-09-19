@@ -10,6 +10,6 @@ int main()
 	cout << s.Length() << endl;
 	s.Print();
 	cout << s.Compare() << endl;
-	cout << s.Append() << endl;
+	s.Append();
 	system("pause");
 }

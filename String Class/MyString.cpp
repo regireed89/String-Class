@@ -59,17 +59,17 @@ char MyString::Compare()
 	return i;
 }
 
-char MyString::Append()
+void MyString::Append()
 {
-
 	char App[5] = "poop";
-	int i;
-	char a;
+	char i;
+	char a[];
 	for (i = 0; i < Length(); i++)
 	{
-		a = m_string + App[i];
-		cout << a;
+		a[i] = { m_string[i] + App[5] };
 	}
-	return a;
+	cout << a;
+
+
 }
 
