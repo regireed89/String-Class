@@ -32,7 +32,7 @@ void MyString::Print()
 	// 
 	for (int i = 0; i < Length(); i++)
 	{
-		cout << m_string[i]<<endl;
+		cout << m_string[i] << endl;
 	}
 
 
@@ -63,14 +63,13 @@ char MyString::Append()
 {
 
 	char App[5] = "poop";
-	char i;
+	int i;
+	char a;
 	for (i = 0; i < Length(); i++)
 	{
-		App[i] + m_string[i];
-		cout << i;
+		a = m_string + App[i];
+		cout << a;
 	}
-
-
-	return i;
+	return a;
 }
 
