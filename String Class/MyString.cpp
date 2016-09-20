@@ -63,20 +63,41 @@ char MyString::Compare()
 int MyString::Append()
 {
 	char App[5] = "poop";
-	
-	int i, j;
+	char c[12];
+	int i, j, x;
 
-	for (i = 0; m_string[i] != Length(); ++i);
-	for (j = 0; App[j] != Length(); ++j, ++i)
+	for (i = 0; m_string[i] != Length(); ++i)
 	{
-		 m_string[i] = App[j];
+		
 	}
-	m_string[i] = '\0';
-	cout << m_string[i];
-
+	for (j = 0; App[j] = Length(); ++j)
+	{
+		
+	}
+	for (x = 0; x != Length(); x++)
+	{
+		c[x] = m_string[i] + App[j];
+	}
+	cout << c[x];
+//dont know how to put strings together!!!!!!!!		
 	
-	return 0;
+		return 0;
 	system("pause");
 
+}
+
+char MyString::Prepend()
+{
+	return 0;
+}
+
+char MyString::Return()
+{
+	return 0;
+}
+
+char MyString::ConvertLow()
+{
+	return 0;
 }
 
