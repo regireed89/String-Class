@@ -48,10 +48,11 @@ char MyString::Compare()
 		{
 			if (Comp[i] == m_string[i])
 			{
-				cout << i;
+				return true;
 			}
 			else
 			{
+				cout << i;
 				return false;
 			}
 		}
@@ -59,17 +60,23 @@ char MyString::Compare()
 	return i;
 }
 
-void MyString::Append()
+int MyString::Append()
 {
 	char App[5] = "poop";
-	char i;
-	char a[];
-	for (i = 0; i < Length(); i++)
-	{
-		a[i] = { m_string[i] + App[5] };
-	}
-	cout << a;
+	
+	int i, j;
 
+	for (i = 0; m_string[i] != Length(); ++i);
+	for (j = 0; App[j] != Length(); ++j, ++i)
+	{
+		 m_string[i] = App[j];
+	}
+	m_string[i] = '\0';
+	cout << m_string[i];
+
+	
+	return 0;
+	system("pause");
 
 }
 
