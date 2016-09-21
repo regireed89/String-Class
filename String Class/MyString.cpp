@@ -79,6 +79,7 @@ int MyString::Append()
 	//dont know how to put strings together!!!!!!!!		
 
 	return 0;
+
 	system("pause");
 
 }

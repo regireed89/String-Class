@@ -30,6 +30,7 @@ public:
 	//convert strin gto uppercase
 	char ConvertUp();
 
+
 	//find sub string
 	char FindSub();
 
