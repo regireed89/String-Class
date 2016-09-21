@@ -114,44 +114,51 @@ char MyString::ConvertUp()
 	int i;
 	for (i = 0; i < Length(); i++)
 	{
+
 		if (m_string[i] > 96 && m_string[i] < 123)
 		{
 			(char)m_string[i] = (int)m_string[i] - 32;
+
+			if (m_string[i] > 96 && m_string[i] < 123)
+			{
+				(char)m_string[i] = (int)m_string[i] - 32;
+
+			}
 		}
+		return m_string[i];
 	}
-	return m_string[i];
 }
 
-char MyString::FindSub()
-{
-	int x;
-	for (char i = 0; m_string[i] < Length(); i++)
+	char MyString::FindSub()
 	{
-		cin >> x;
-		if (x == m_string[i])
+		int x;
+		for (char i = 0; m_string[i] < Length(); i++)
 		{
-			cout << m_string[i, x] << endl;
-			return true;
+			cin >> x;
+			if (x == m_string[i])
+			{
+				cout << m_string[i, x] << endl;
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
-		else
-		{
-			return false;
-		}
+		return 0;
 	}
-	return 0;
-}
 
-char MyString::SubCI()
-{
-	return 0;
-}
+	char MyString::SubCI()
+	{
+		return 0;
+	}
 
-char MyString::ReplaceSub()
-{
-	return 0;
-}
+	char MyString::ReplaceSub()
+	{
+		return 0;
+	}
 
-char MyString::SetCStyle()
-{
-	return 0;
-}
+	char MyString::SetCStyle()
+	{
+		return 0;
+	}
