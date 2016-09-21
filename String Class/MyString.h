@@ -31,7 +31,7 @@ public:
 	char ConvertUp();
 
 	//find sub string
-	char Sub();
+	char FindSub();
 
 	//find sub-string starting at a certain index
 	char SubCI();

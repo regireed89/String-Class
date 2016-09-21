@@ -10,6 +10,9 @@ int main()
 	cout << s.Length() << endl;
 	s.Print();
 	cout << s.Compare() << endl;
-	s.Append();
+	/*s.Append();*/
+	s.ConvertUp();
+	s.ConvertLow();
+	s.FindSub();
 	system("pause");
 }
