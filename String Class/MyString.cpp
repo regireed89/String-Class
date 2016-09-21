@@ -67,11 +67,9 @@ int MyString::Append()
 
 	for (i = 0; m_string[i] != Length(); ++i)
 	{
-
 	}
 	for (j = 0; App[j] = Length(); ++j)
 	{
-
 	}
 	for (x = 0; x != Length(); x++)
 	{
