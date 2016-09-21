@@ -24,7 +24,7 @@ int MyString::Length()
 	}
 
 	return i;
-}
+}   
 
 void MyString::Print()
 {
@@ -61,22 +61,11 @@ char MyString::Compare()
 
 int MyString::Append()
 {
-	char App[5] = "poop";
-	char c[12];
-	int i, j, x;
-
-	for (i = 0; m_string[i] != Length(); ++i)
+	int i;
+	for (i = 0; i < Length(); i++)
 	{
+		m_string[i];
 	}
-	for (j = 0; App[j] = Length(); ++j)
-	{
-	}
-	for (x = 0; x != Length(); x++)
-	{
-		c[x] = m_string[i] + App[j];
-	}
-	cout << c[x];
-	//dont know how to put strings together!!!!!!!!		
 
 	return 0;
 
@@ -117,47 +106,41 @@ char MyString::ConvertUp()
 		if (m_string[i] > 96 && m_string[i] < 123)
 		{
 			(char)m_string[i] = (int)m_string[i] - 32;
-
-			if (m_string[i] > 96 && m_string[i] < 123)
-			{
-				(char)m_string[i] = (int)m_string[i] - 32;
-
-			}
 		}
 		return m_string[i];
 	}
 }
 
-	char MyString::FindSub()
+char MyString::FindSub()
+{
+	int x;
+	for (char i = 0; m_string[i] < Length(); i++)
 	{
-		int x;
-		for (char i = 0; m_string[i] < Length(); i++)
+		cin >> x;
+		if (x == m_string[i])
 		{
-			cin >> x;
-			if (x == m_string[i])
-			{
-				cout << m_string[i, x] << endl;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			cout << m_string[i, x] << endl;
+			return true;
 		}
-		return 0;
+		else
+		{
+			return false;
+		}
 	}
+	return 0;
+}
 
-	char MyString::SubCI()
-	{
-		return 0;
-	}
+char MyString::SubCI()
+{
+	return 0;
+}
 
-	char MyString::ReplaceSub()
-	{
-		return 0;
-	}
+char MyString::ReplaceSub()
+{
+	return 0;
+}
 
-	char MyString::SetCStyle()
-	{
-		return 0;
-	}
+char MyString::SetCStyle()
+{
+	return 0;
+}
