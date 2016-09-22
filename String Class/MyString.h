@@ -13,10 +13,10 @@ public:
 	void Print();
 
 	//compare if one string is the same as another
-	char Compare();
+	char Compare(MyString app);
 
 	//append one string to another
-	char Append(string App);
+	char Append(MyString app);
 
 	//prepend one string to another
 	char Prepend();
@@ -29,7 +29,6 @@ public:
 
 	//convert strin gto uppercase
 	char ConvertUp();
-
 
 	//find sub string
 	char FindSub();

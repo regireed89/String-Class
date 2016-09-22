@@ -38,15 +38,14 @@ void MyString::Print()
 
 }
 
-char MyString::Compare()
+char MyString::Compare(MyString app)
 {
-	char Comp[7] = "turyle";
 	int i;
 	for (i = 0; i < Length(); i++)
 	{
-		for (i = 0; i != Comp[i] && m_string[i]; i++)//loops until the character are not the same
+		for (i = 0; i != app.Length && m_string.Length; i++)//loops until the character are not the same
 		{
-			if (Comp[i] == m_string[i])
+			if (app == m_string)
 			{
 				return true;
 			}
@@ -59,9 +58,9 @@ char MyString::Compare()
 	return i;
 }
 
-char MyString::Append(string App)
+char MyString::Append(MyString app)
 {
-	App = "poop";
+	
 	char c[255];
 	int i, j;
 	for (i = 0; i < Length(); i++)
@@ -69,9 +68,9 @@ char MyString::Append(string App)
 	    c[i] = m_string[i];
 		cout << c[i];
 	} 
-	for (j = 0; App < Length(); j++)
+	for (j = 0; app < Length(); j++)
 	{
-		c[i] < (m_string[i] + App);
+		c[i] < (m_string[i] + app);
 	}
 	return 0;                        
 
