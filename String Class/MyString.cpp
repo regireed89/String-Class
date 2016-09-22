@@ -59,29 +59,24 @@ char MyString::Compare()
 	return i;
 }
 
-int MyString::Append()
+char MyString::Append(string App)
 {
-	int i;
+	App = "poop";
+	char c[255];
+	int i, j;
 	for (i = 0; i < Length(); i++)
 	{
-		m_string[i];
+	    c[i] = m_string[i];
+		cout << c[i];
+	} 
+	for (j = 0; App < Length(); j++)
+	{
+		c[i] < (m_string[i] + App);
 	}
-
-	return 0;
+	return 0;                        
 
 	system("pause");
 
-}
-
-char MyString::Prepend()
-{
-	return 0;
-}
-
-char MyString::Return()
-{
-	//no clue what a constant c-style is
-	return 0;
 }
 
 char MyString::ConvertLow()
@@ -107,8 +102,9 @@ char MyString::ConvertUp()
 		{
 			(char)m_string[i] = (int)m_string[i] - 32;
 		}
-		return m_string[i];
 	}
+		return m_string[i];
+	
 }
 
 char MyString::FindSub()
@@ -130,17 +126,3 @@ char MyString::FindSub()
 	return 0;
 }
 
-char MyString::SubCI()
-{
-	return 0;
-}
-
-char MyString::ReplaceSub()
-{
-	return 0;
-}
-
-char MyString::SetCStyle()
-{
-	return 0;
-}

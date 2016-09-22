@@ -16,7 +16,7 @@ public:
 	char Compare();
 
 	//append one string to another
-	int Append();
+	char Append(string App);
 
 	//prepend one string to another
 	char Prepend();
