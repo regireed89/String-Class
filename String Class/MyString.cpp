@@ -32,20 +32,20 @@ void MyString::Print()
 	// 
 	for (int i = 0; i < Length(); i++)
 	{
-		cout << m_string[i] << endl;// prints out character associated with that index
+		cout << m_string[i] << endl; // prints out character associated with that index
 	}
 
 
 }
 
-//char MyString::Compare(MyString app)
+//char MyString::Compare(MyString other)
 //{
 //	int i;
 //	for (i = 0; i < Length(); i++)
 //	{
-//		for (i = 0; i != app.Length && m_string.Length; i++)//loops until the character are not the same
-//		{
-//			if (app == m_string)
+//		for (i = 0; i != other.Length && m_string.Length; i++)//loops until the character are not the same
+//		{                                                   
+//			if (other == m_string)
 //			{
 //				return true;
 //			}
@@ -58,27 +58,19 @@ void MyString::Print()
 //	return i;
 //}
 
-char MyString::Append(MyString app)
+char MyString::Append(MyString other)
 {
-	char d[255];
+	
 	char c[255];
-	int i, j;
-	for (i = 0; i < Length(); i++)
+	int i;
+	for (i = Length(); i < other.Length() + 6; i++)
 	{
-	    c[i] = m_string[i];
-		cout << c[i];
+	    c[i] = m_string[i + other.Length()];
 	} 
-	for (j = 0; j < app.Length(); j++)
-	{
-		d[j] = app.Length();
-		cout << d[j];
-	}
-	/*char c[Length + app.Length];
-	cout << c[Length() + app.Length()];*/
-	return 0;                        
+	    return 0;                        
 
 	system("pause");
-
+	
 }
 
 char MyString::Prepend(MyString app)
@@ -113,6 +105,7 @@ char MyString::ConvertUp()
 		if (m_string[i] > 96 && m_string[i] < 123)
 		{
 			(char)m_string[i] = (int)m_string[i] - 32;
+			cout << m_string[i];
 		}
 	}
 		return m_string[i];
