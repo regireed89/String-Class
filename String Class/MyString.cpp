@@ -38,29 +38,29 @@ void MyString::Print()
 
 }
 
-char MyString::Compare(MyString app)
-{
-	int i;
-	for (i = 0; i < Length(); i++)
-	{
-		for (i = 0; i != app.Length && m_string.Length; i++)//loops until the character are not the same
-		{
-			if (app == m_string)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-	}
-	return i;
-}
+//char MyString::Compare(MyString app)
+//{
+//	int i;
+//	for (i = 0; i < Length(); i++)
+//	{
+//		for (i = 0; i != app.Length && m_string.Length; i++)//loops until the character are not the same
+//		{
+//			if (app == m_string)
+//			{
+//				return true;
+//			}
+//			else
+//			{
+//				return false;
+//			}
+//		}
+//	}
+//	return i;
+//}
 
 char MyString::Append(MyString app)
 {
-	
+	char d[255];
 	char c[255];
 	int i, j;
 	for (i = 0; i < Length(); i++)
@@ -68,14 +68,27 @@ char MyString::Append(MyString app)
 	    c[i] = m_string[i];
 		cout << c[i];
 	} 
-	for (j = 0; app < Length(); j++)
+	for (j = 0; j < app.Length(); j++)
 	{
-		c[i] < (m_string[i] + app);
+		d[j] = app.Length();
+		cout << d[j];
 	}
+	/*char c[Length + app.Length];
+	cout << c[Length() + app.Length()];*/
 	return 0;                        
 
 	system("pause");
 
+}
+
+char MyString::Prepend(MyString app)
+{
+	return 0;
+}
+
+const char* MyString::Return()
+{
+	return m_string;
 }
 
 char MyString::ConvertLow()

@@ -19,10 +19,10 @@ public:
 	char Append(MyString app);
 
 	//prepend one string to another
-	char Prepend();
+	char Prepend(MyString app);
 
 	//return basic constant C-style string
-	char Return();
+	const char* Return();
 
 	//convert string top lowercase
 	char ConvertLow();
