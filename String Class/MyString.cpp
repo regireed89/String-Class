@@ -60,13 +60,16 @@ void MyString::Print()
 
 char MyString::Append(MyString other)
 {
-	
-	char c[255];
 	int i;
-	for (i = Length(); i < other.Length() + 6; i++)
+	char c[255];
+	int mylength = Length();
+	int otherlength = other.Length();
+	for (i = mylength; i < otherlength + 6; i++)
 	{
-	    c[i] = m_string[i + other.Length()];
+		c[i] = m_string[i + otherlength];
+		cout << c[i];
 	} 
+	
 	    return 0;                        
 
 	system("pause");
