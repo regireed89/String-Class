@@ -64,16 +64,14 @@ char MyString::Append(MyString other)
 	char c[255];
 	int mylength = Length();
 	int otherlength = other.Length();
-	for (i = mylength; i < otherlength + mylength; i++)
+	for (i = mylength; i < otherlength ; i++)
 	{
 		c[i] = m_string[mylength + i];
-		cout << c[i];
-	} 
-	
-	    return 0;                        
+		i++;
+	} 	
+	    return i;                        
 
-	system("pause");
-	
+	system("pause");	
 }
 
 char MyString::Prepend(MyString app)
