@@ -64,9 +64,9 @@ char MyString::Append(MyString other)
 	char c[255];
 	int mylength = Length();
 	int otherlength = other.Length();
-	for (i = mylength; i < otherlength + 6; i++)
+	for (i = mylength; i < otherlength + mylength; i++)
 	{
-		c[i] = m_string[i + otherlength];
+		c[i] = m_string[mylength + i];
 		cout << c[i];
 	} 
 	
