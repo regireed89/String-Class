@@ -64,10 +64,9 @@ char MyString::Append(MyString other)
 	char c[255];
 	int mylength = Length();
 	int otherlength = other.Length();
-	for (i = mylength; i < otherlength ; i++)
+	for (i = mylength; i < otherlength + 6; i++)
 	{
-		c[i] = m_string[mylength + i];
-		i++;
+		c[i] = m_string[otherlength + mylength];
 	} 	
 	    return i;                        
 
@@ -115,13 +114,12 @@ char MyString::ConvertUp()
 
 char MyString::FindSub()
 {
-	int x;
-	for (char i = 0; m_string[i] < Length(); i++)
+	char x;
+	for (char i = 0; i < Length(); i++)
 	{
 		cin >> x;
-		if (x == m_string[i])
+		if (x == i)
 		{
-			cout << m_string[i, x] << endl;
 			return true;
 		}
 		else
