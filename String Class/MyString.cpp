@@ -38,25 +38,26 @@ void MyString::Print()
 
 }
 
-//char MyString::Compare(MyString other)
-//{
-//	int i;
-//	for (i = 0; i < Length(); i++)
-//	{
-//		for (i = 0; i != other.Length && m_string.Length; i++)//loops until the character are not the same
-//		{                                                   
-//			if (other == m_string)
-//			{
-//				return true;
-//			}
-//			else
-//			{
-//				return false;
-//			}
-//		}
-//	}
-//	return i;
-//}
+char MyString::Compare(MyString other)
+{
+	int i;
+
+	for (i = 0; i < Length(); i++)
+	{
+		for (i = 0; i < Length(); i++)
+		{                                                   
+			if (other == m_string[i])
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+	}
+	return i;
+}
 
 char MyString::Append(MyString other)
 {
@@ -114,18 +115,21 @@ char MyString::ConvertUp()
 
 char MyString::FindSub()
 {
+	
 	char x;
 	for (char i = 0; i < Length(); i++)
 	{
 		cin >> x;
-		if (x == i)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+			if (x == m_string[i])
+			{
+				cout << "true";
+				return true;
+			}
+			if (x != m_string[i])
+			{
+				cout << "false";
+				return false;
+			}
 	}
 	return 0;
 }
