@@ -134,3 +134,16 @@ char MyString::FindSub()
 	return 0;
 }
 
+char MyString::SubCI()
+{
+	char x;
+	for (char i = 0; i < Length(); i++)
+	{
+		for (char x = m_string[i]; x < m_string[i]; x++)
+		{
+			
+		}
+	}
+	return 0;
+}
+
