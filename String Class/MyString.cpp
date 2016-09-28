@@ -38,7 +38,7 @@ void MyString::Print()
 
 }
 
-char MyString::Compare(MyString other)
+/*char MyString::Compare(MyString other)
 {
 	int i;
 
@@ -57,7 +57,7 @@ char MyString::Compare(MyString other)
 		}
 	}
 	return i;
-}
+}*/
 
 char MyString::Append(MyString other)
 {
