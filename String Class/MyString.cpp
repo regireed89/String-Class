@@ -69,9 +69,10 @@ char MyString::Append(MyString other)
 	{
 		c[i] = m_string[otherlength + mylength];
 	} 	
-	    return i;                        
 
-	system("pause");	
+
+	return i;                        
+		
 }
 
 char MyString::Prepend(MyString app)
