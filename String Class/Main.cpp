@@ -16,6 +16,7 @@ int main()
 	//s.Return();
 	//s.ConvertUp();
 	//s.ConvertLow();
-	cout<<s.FindSub();
+	//cout<<s.FindSub();
+	cout << s.SubCI();
 	system("pause");
 }

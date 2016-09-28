@@ -44,7 +44,7 @@ char MyString::Compare(MyString other)
 
 	for (i = 0; i < Length(); i++)
 	{
-		for (i = 0; i < Length(); i++)
+		for (i = 0; i != other && m_string[i]; i++)
 		{                                                   
 			if (other == m_string[i])
 			{
@@ -134,7 +134,7 @@ char MyString::FindSub()
 	return 0;
 }
 
-char MyString::SubCI()
+char MyString::SubCI()7
 {
 	char x;
 	for (char i = 0; i < Length(); i++)
