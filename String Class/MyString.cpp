@@ -62,14 +62,12 @@ void MyString::Print()
 char MyString::Append(MyString other)
 {
 	int i;
-	char c[255];
 	int mylength = Length();
 	int otherlength = other.Length();
 	for (i = mylength; i < otherlength + 6; i++)
 	{
-		c[i] = m_string[otherlength + mylength];
+		m_string + other[i];
 	} 	
-
 
 	return i;                        
 		
