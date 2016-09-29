@@ -64,7 +64,6 @@ char MyString::Append(MyString other)
 	int i;
 	for (i = Length(); i < other.Length() + Length(); i++)
 	{
-
 		 m_string[i];
 	} 	
 
