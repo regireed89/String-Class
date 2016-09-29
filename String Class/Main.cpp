@@ -11,7 +11,7 @@ int main()
 	//cout << s.Length() << endl;
 	//s.Print();
 	//cout << s.Compare(MyString app) << endl;
-	s.Append((MyString) other);
+	s.Append(other);
 	//s.Prepend(MyString app);
 	//s.Return();
 	//s.ConvertUp();

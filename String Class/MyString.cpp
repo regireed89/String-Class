@@ -62,11 +62,10 @@ void MyString::Print()
 char MyString::Append(MyString other)
 {
 	int i;
-	int mylength = Length();
-	int otherlength = other.Length();
-	for (i = mylength; i < otherlength + 6; i++)
+	for (i = Length(); i < other.Length() + Length(); i++)
 	{
-		m_string + other[i];
+
+		 m_string[i];
 	} 	
 
 	return i;                        
@@ -135,7 +134,7 @@ char MyString::FindSub()
 
 char MyString::SubCI()
 {
-	char x;
+	
 	for (char i = 0; i < Length(); i++)
 	{
 		for (char x = m_string[i]; x < m_string[i]; x++)
