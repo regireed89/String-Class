@@ -61,7 +61,7 @@ void MyString::Print()
 
 char MyString::Append(MyString other)
 {
-	int i;
+	char i;
 	for (i = Length(); i < other.Length() + Length(); i++)
 	{
 		 m_string[i];
@@ -71,7 +71,7 @@ char MyString::Append(MyString other)
 		
 }
 
-char MyString::Prepend(MyString app)
+char MyString::Prepend(MyString other)
 {
 	return 0;
 }
