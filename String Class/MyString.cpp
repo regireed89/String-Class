@@ -64,8 +64,8 @@ char MyString::Append(MyString other)
 	int i;
 	for (i = 0; i < Length() + other.Length(); i++)
 	{
-	
-		m_string[i] = other;
+		char c[255] = { m_string[i] + other.m_string };
+		m_string[i] = i;
 		i++;
 	}
 
