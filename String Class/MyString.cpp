@@ -61,11 +61,11 @@ void MyString::Print()
 
 char MyString::Append(MyString other)
 {
-	
-	for (int i = 0; i < Length() + other.Length(); i++)
+	int i;
+	for (i = 0; i < Length() + other.Length(); i++)
 	{
 	
-		m_string[i] = other.m_string;
+		m_string[i] = other;
 		i++;
 	}
 
