@@ -14,7 +14,7 @@ int main()
 	cout << s.Compare(other) << endl;
 	std::cout << s.Append(other).SetCStyle() << std::endl;
 	cout<<s.Return() << endl;
-	cout <<"the string uppercase is" << s.ConvertUp() << endl;
-	cout <<"the string lowercase is" << s.ConvertLow() << endl;
+	cout <<"is the string uppercase" << s.ConvertUp() << endl;
+	cout <<"is the string lowercase" << s.ConvertLow() << endl;
 	system("pause");
 }
