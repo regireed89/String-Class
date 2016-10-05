@@ -24,7 +24,7 @@ int MyString::Length()
 	}
 
 	return i;
-}   
+}
 
 void MyString::Print()
 {
@@ -38,44 +38,63 @@ void MyString::Print()
 
 }
 
-/*char MyString::Compare(MyString other)
+bool MyString::Compare(MyString other)
 {
 	int i;
 
-	for (i = 0; i < Length(); i++)
+	for (i = 0; i != other.Length() && Length(); i++)
 	{
-		for (i = 0; i != other && m_string[i]; i++)
-		{                                                   
-			if (other == m_string[i])
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+		if (other.m_string[i] == m_string[i])
+		{
+			cout << 1;
+			return true;
+		}
+		else
+		{
+			return false;
 		}
 	}
-	return i;
-}*/
 
-char MyString::Append(MyString other)
-{
-	int i;
-	for (i = m_string[0]; i < Length() + other.Length(); i++)
-	{
-		char x = i;
-
-		m_string[i];
-	} 	
-
-	return i;                        
-		
 }
 
-char MyString::Prepend(MyString app)
+MyString MyString::Append(MyString other)
 {
-	return 0;
+	char carray[255];
+	//if i have "hello" + "bob"
+	//totalsize would be 5 + 3 + 1 for the '/0'
+	int totalSize = this->Length() + other.Length() + 1;
+	//since arrays start at 0 we subtract 1
+	carray[totalSize - 1] = '\0';
+	for (int i = 0; i < this->Length() + other.Length(); i++)
+	{
+		if (i < this->Length())
+			carray[i] = m_string[i];
+		else
+			carray[i] = other.m_string[i - this->Length()];
+	}
+
+	MyString ms = MyString(carray);
+	return ms;
+}
+
+MyString MyString::Prepend(MyString other)
+{
+	char carray[255];
+
+	int totalSize = other.Length() + Length() + 1;
+
+	carray[totalSize - 1] = '/0';
+
+	for (int i = 0; i < other.Length() + Length(); i++)
+	{
+		if (i < other.Length())
+			carray[i] = other.m_string[i];
+		else
+			carray[i] = m_string[i - other.Length()];
+	}
+
+	MyString ms = MyString(carray);
+	return ms;
 }
 
 const char* MyString::Return()
@@ -108,34 +127,36 @@ char MyString::ConvertUp()
 			cout << m_string[i];
 		}
 	}
-		return m_string[i];
-	
+	return m_string[i];
+
 }
 
-char MyString::FindSub()
+const char * MyString::SetCStyle()
+{
+	return m_string;
+}
+
+bool MyString::FindSub(char sub[])
 {
 	
-	char x;
 	for (char i = 0; i < Length(); i++)
 	{
-		cin >> x;
-			if (x == m_string[i])
-			{
-				cout << "true";
-				return true;
-			}
-			if (x != m_string[i])
-			{
-				cout << "false";
-				return false;
-			}
+		if (sub[i] == m_string[i])
+		{
+			cout << "true";
+			return true;
+		}
+		if (sub[i] != m_string[i])
+		{
+			cout << "false";
+			return false;
+		}
 	}
-	return 0;
 }
 
 char MyString::SubCI()
 {
-	
+
 	for (char i = 0; i < Length(); i++)
 	{
 		for (char x = m_string[i]; x < m_string[i]; x++)
@@ -152,4 +173,5 @@ char MyString::SubCI()
 	}
 	return 0;
 }
+
 
