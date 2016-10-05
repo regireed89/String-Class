@@ -10,7 +10,7 @@ public:
 	int Length();
 
 	//access character at a acertain index
-	void Print();
+	char Print();
 
 	//compare if one string is the same as another
 	bool Compare(MyString other);

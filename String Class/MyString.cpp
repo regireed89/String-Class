@@ -26,16 +26,18 @@ int MyString::Length()
 	return i;
 }
 
-void MyString::Print()
+char MyString::Print()
 {
 	// find a charcter at a specific index of a character array
 	// 
-	for (int i = 0; i < Length(); i++)
+	int i;
+	for (i = 0; i < Length(); i++)
 	{
 		cout << m_string[3] << endl; // prints out character associated with that index
+	
 	}
 
-
+	return m_string[i];
 }
 
 bool MyString::Compare(MyString other)
@@ -46,11 +48,12 @@ bool MyString::Compare(MyString other)
 	{
 		if (other.m_string[i] == m_string[i])
 		{
-			cout << 1;
+			cout << "strings are the same";
 			return true;
 		}
 		else
 		{
+			cout << "strings are not the same";
 			return false;
 		}
 	}
@@ -110,6 +113,7 @@ char MyString::ConvertLow()
 		if (m_string[i] > 64 && m_string[i] < 91)//if characters on ASCII table are 64-91 add 32 then return the character
 		{
 			(char)m_string[i] = (int)m_string[i] + 32;//adding 32 to the decimal associated with the characters in the array 
+			cout << m_string[i];
 		}
 	}
 	return m_string[i];
