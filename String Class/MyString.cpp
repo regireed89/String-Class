@@ -32,7 +32,7 @@ void MyString::Print()
 	// 
 	for (int i = 0; i < Length(); i++)
 	{
-		cout << m_string[i] << endl; // prints out character associated with that index
+		cout << m_string[3] << endl; // prints out character associated with that index
 	}
 
 
@@ -59,7 +59,6 @@ bool MyString::Compare(MyString other)
 
 MyString MyString::Append(MyString other)
 {
-<<<<<<< HEAD
 	char carray[255];
 	//if i have "hello" + "bob"
 	//totalsize would be 5 + 3 + 1 for the '/0'
@@ -72,25 +71,13 @@ MyString MyString::Append(MyString other)
 			carray[i] = m_string[i];
 		else
 			carray[i] = other.m_string[i - this->Length()];
-=======
-	int i;
-	for (i = 0; i < Length() + other.Length(); i++)
-	{
-		char c[255] = { m_string[i] + other.m_string };
-		m_string[i] = i;
-		i++;
->>>>>>> origin/master
 	}
 
 	MyString ms = MyString(carray);
 	return ms;
 }
 
-<<<<<<< HEAD
 MyString MyString::Prepend(MyString other)
-=======
-char MyString::Prepend(MyString other)
->>>>>>> origin/master
 {
 	char carray[255];
 
@@ -174,7 +161,14 @@ char MyString::SubCI()
 	{
 		for (char x = m_string[i]; x < m_string[i]; x++)
 		{
-			
+			if (x == i)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 	}
 	return 0;
