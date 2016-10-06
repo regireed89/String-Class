@@ -50,7 +50,8 @@ MyString MyString::Append(MyString other)
 {
 	char carray[255];
 	
-	int totalSize = this->Length() + other.Length() + 1;// assign the size of both strings to a variable and adding 1 to hold the place of terminating character
+	int totalSize = this->Length() + other.Length() + 1;
+	// assign the size of both strings to a variable and adding 1 to hold the place of terminating character
 	//since arrays start at 0 we subtract 1 from the total length
 	carray[totalSize - 1] = '\0';
 	for (int i = 0; i < this->Length() + other.Length(); i++)
@@ -75,9 +76,11 @@ char MyString::ConvertLow()
 	int i;
 	for (i = 0; i < Length(); i++)
 	{
-		if (m_string[i] > 64 && m_string[i] < 91)//if characters on ASCII table are 64-91 add 32 then return the character
+		if (m_string[i] > 64 && m_string[i] < 91)
+			//if characters on ASCII table are 64-91 add 32 then return the character
 		{
-			(char)m_string[i] = (int)m_string[i] + 32;//adding 32 to the decimal associated with the characters in the array 
+			(char)m_string[i] = (int)m_string[i] + 32;
+			//adding 32 to the decimal associated with the characters in the array 
 			cout << m_string[i];
 		}
 	}
@@ -90,9 +93,11 @@ char MyString::ConvertUp()
 	for (i = 0; i < Length(); i++)
 	{
 
-		if (m_string[i] > 96 && m_string[i] < 123) //if characters on ASCII table are 96-123 subtract 32 then return the character
+		if (m_string[i] > 96 && m_string[i] < 123) 
+			//if characters on ASCII table are 96-123 subtract 32 then return the character
 		{
-			(char)m_string[i] = (int)m_string[i] - 32; //subtracts 32 to the decimal associated with the characters in the array
+			(char)m_string[i] = (int)m_string[i] - 32; 
+			//subtracts 32 to the decimal associated with the characters in the array
 			cout << m_string[i];
 		}
 	}
