@@ -30,9 +30,9 @@ bool MyString::Compare(MyString other)
 {
 	int i;
 
-	for (i = 0; i != other.Length() && Length(); i++)
+	for (i = 0; i != other.Length() && Length(); i++)//loops until not equal to either strings
 	{
-		if (other.m_string[i] == m_string[i])
+		if (other.m_string[i] == m_string[i])//compares other to m_string
 		{
 			cout << "strings are the same";
 			return true;
@@ -49,8 +49,7 @@ bool MyString::Compare(MyString other)
 MyString MyString::Append(MyString other)
 {
 	char carray[255];
-	//if i have "hello" + "bob"
-	//totalsize would be 5 + 3 + 1 for the '/0'
+	
 	int totalSize = this->Length() + other.Length() + 1;// assign the size of both strings to a variable and adding 1 to hold the place of terminating character
 	//since arrays start at 0 we subtract 1 from the total length
 	carray[totalSize - 1] = '\0';
@@ -58,7 +57,7 @@ MyString MyString::Append(MyString other)
 	{
 		if (i < this->Length())// if the length is less than i then assign m_string to carray
 			carray[i] = m_string[i];
-		else//else 
+		else//else assign other string to carray
 			carray[i] = other.m_string[i - this->Length()];
 	}
 
@@ -91,9 +90,9 @@ char MyString::ConvertUp()
 	for (i = 0; i < Length(); i++)
 	{
 
-		if (m_string[i] > 96 && m_string[i] < 123)
+		if (m_string[i] > 96 && m_string[i] < 123) //if characters on ASCII table are 96-123 subtract 32 then return the character
 		{
-			(char)m_string[i] = (int)m_string[i] - 32;
+			(char)m_string[i] = (int)m_string[i] - 32; //subtracts 32 to the decimal associated with the characters in the array
 			cout << m_string[i];
 		}
 	}
