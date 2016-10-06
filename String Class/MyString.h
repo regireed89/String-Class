@@ -10,16 +10,16 @@ public:
 	int Length();
 
 	//access character at a acertain index
-	void Print();
+	char Print();
 
 	//compare if one string is the same as another
-	char Compare(MyString app);
+	bool Compare(MyString other);
 
 	//append one string to another
-	char Append(MyString other);
+	MyString Append(MyString other);
 
 	//prepend one string to another
-	char Prepend(MyString app);
+	MyString Prepend(MyString other);
 
 	//return basic constant C-style string
 	const char* Return();
@@ -30,8 +30,11 @@ public:
 	//convert strin gto uppercase
 	char ConvertUp();
 
+	//set string to an input C-style string
+	const char * SetCStyle();
+
 	//find sub string
-	char FindSub();
+	bool FindSub(char sub[]);
 
 	//find sub-string starting at a certain index
 	char SubCI();
@@ -39,8 +42,6 @@ public:
 	//replace sub-string with another sub string
 	char ReplaceSub();
 
-	//set string to an input C-style string
-	char SetCStyle();
 
 private:
 	char m_string[255];

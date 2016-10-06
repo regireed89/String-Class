@@ -24,57 +24,85 @@ int MyString::Length()
 	}
 
 	return i;
-}   
+}
 
-void MyString::Print()
+char MyString::Print()
 {
 	// find a charcter at a specific index of a character array
 	// 
-	for (int i = 0; i < Length(); i++)
-	{
-		cout << m_string[i] << endl; // prints out character associated with that index
-	}
-
-
-}
-
-/*char MyString::Compare(MyString other)
-{
 	int i;
-
 	for (i = 0; i < Length(); i++)
 	{
-		for (i = 0; i != other && m_string[i]; i++)
-		{                                                   
-			if (other == m_string[i])
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-	}
-	return i;
-}*/
-
-char MyString::Append(MyString other)
-{
-	int i;
-	for (i = 0; i < Length() + other.Length(); i++)
-	{
-		m_string[i] = i + other.m_string;
-		i++;
+		cout << m_string[3] << endl; // prints out character associated with that index
+	
 	}
 
-	return i;                        
-		
+	return m_string[i];
 }
 
-char MyString::Prepend(MyString other)
+bool MyString::Compare(MyString other)
 {
-	return 0;
+	int i;
+
+	for (i = 0; i != other.Length() && Length(); i++)
+	{
+		if (other.m_string[i] == m_string[i])
+		{
+			cout << "strings are the same";
+			return true;
+		}
+		else
+		{
+			cout << "strings are not the same";
+			return false;
+		}
+	}
+
+}
+
+MyString MyString::Append(MyString other)
+{
+	char carray[255];
+	//if i have "hello" + "bob"
+	//totalsize would be 5 + 3 + 1 for the '/0'
+	int totalSize = this->Length() + other.Length() + 1;
+	//since arrays start at 0 we subtract 1
+	carray[totalSize - 1] = '\0';
+	for (int i = 0; i < this->Length() + other.Length(); i++)
+	{
+<<<<<<< HEAD
+		m_string[i] = i + other.m_string;
+		i++;
+=======
+		if (i < this->Length())
+			carray[i] = m_string[i];
+		else
+			carray[i] = other.m_string[i - this->Length()];
+>>>>>>> origin/master
+	}
+
+	MyString ms = MyString(carray);
+	return ms;
+}
+
+MyString MyString::Prepend(MyString other)
+{
+	char carray[255];
+
+	int totalSize = other.Length() + Length() + 1;
+
+	carray[totalSize - 1] = '/0';
+
+	for (int i = 0; i < other.Length() + Length(); i++)
+	{
+		if (i < other.Length())
+			carray[i] = other.m_string[i];
+		else
+			carray[i] = m_string[i - other.Length()];
+	}
+
+	MyString ms = MyString(carray);
+	return ms;
 }
 
 const char* MyString::Return()
@@ -90,6 +118,7 @@ char MyString::ConvertLow()
 		if (m_string[i] > 64 && m_string[i] < 91)//if characters on ASCII table are 64-91 add 32 then return the character
 		{
 			(char)m_string[i] = (int)m_string[i] + 32;//adding 32 to the decimal associated with the characters in the array 
+			cout << m_string[i];
 		}
 	}
 	return m_string[i];
@@ -107,41 +136,51 @@ char MyString::ConvertUp()
 			cout << m_string[i];
 		}
 	}
-		return m_string[i];
-	
+	return m_string[i];
+
 }
 
-char MyString::FindSub()
+const char * MyString::SetCStyle()
+{
+	return m_string;
+}
+
+bool MyString::FindSub(char sub[])
 {
 	
-	char x;
 	for (char i = 0; i < Length(); i++)
 	{
-		cin >> x;
-			if (x == m_string[i])
-			{
-				cout << "true";
-				return true;
-			}
-			if (x != m_string[i])
-			{
-				cout << "false";
-				return false;
-			}
+		if (sub[i] == m_string[i])
+		{
+			cout << "true";
+			return true;
+		}
+		if (sub[i] != m_string[i])
+		{
+			cout << "false";
+			return false;
+		}
 	}
-	return 0;
 }
 
 char MyString::SubCI()
 {
-	
+
 	for (char i = 0; i < Length(); i++)
 	{
 		for (char x = m_string[i]; x < m_string[i]; x++)
 		{
-			
+			if (x == i)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 	}
 	return 0;
 }
+
 
