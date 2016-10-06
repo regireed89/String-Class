@@ -26,20 +26,6 @@ int MyString::Length()
 	return i;
 }
 
-char MyString::Print()
-{
-	// find a charcter at a specific index of a character array
-	// 
-	int i;
-	for (i = 0; i < Length(); i++)
-	{
-		cout << m_string[3] << endl; // prints out character associated with that index
-	
-	}
-
-	return m_string[i];
-}
-
 bool MyString::Compare(MyString other)
 {
 	int i;
@@ -65,20 +51,15 @@ MyString MyString::Append(MyString other)
 	char carray[255];
 	//if i have "hello" + "bob"
 	//totalsize would be 5 + 3 + 1 for the '/0'
-	int totalSize = this->Length() + other.Length() + 1;
-	//since arrays start at 0 we subtract 1
+	int totalSize = this->Length() + other.Length() + 1;// assign the size of both strings to a variable and adding 1 to hold the place of terminating character
+	//since arrays start at 0 we subtract 1 from the total length
 	carray[totalSize - 1] = '\0';
 	for (int i = 0; i < this->Length() + other.Length(); i++)
 	{
-<<<<<<< HEAD
-		m_string[i] = i + other.m_string;
-		i++;
-=======
-		if (i < this->Length())
+		if (i < this->Length())// if the length is less than i then assign m_string to carray
 			carray[i] = m_string[i];
-		else
+		else//else 
 			carray[i] = other.m_string[i - this->Length()];
->>>>>>> origin/master
 	}
 
 	MyString ms = MyString(carray);
@@ -145,42 +126,5 @@ const char * MyString::SetCStyle()
 	return m_string;
 }
 
-bool MyString::FindSub(char sub[])
-{
-	
-	for (char i = 0; i < Length(); i++)
-	{
-		if (sub[i] == m_string[i])
-		{
-			cout << "true";
-			return true;
-		}
-		if (sub[i] != m_string[i])
-		{
-			cout << "false";
-			return false;
-		}
-	}
-}
-
-char MyString::SubCI()
-{
-
-	for (char i = 0; i < Length(); i++)
-	{
-		for (char x = m_string[i]; x < m_string[i]; x++)
-		{
-			if (x == i)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-	}
-	return 0;
-}
 
 
