@@ -24,6 +24,8 @@ public:
 	//convert strin gto uppercase
 	char ConvertUp();
 
+	//set string to input C-style string
+	const char* SetCStyle();
 
 private:
 	char m_string[255];

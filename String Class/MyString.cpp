@@ -66,26 +66,6 @@ MyString MyString::Append(MyString other)
 	return ms;
 }
 
-MyString MyString::Prepend(MyString other)
-{
-	char carray[255];
-
-	int totalSize = other.Length() + Length() + 1;
-
-	carray[totalSize - 1] = '/0';
-
-	for (int i = 0; i < other.Length() + Length(); i++)
-	{
-		if (i < other.Length())
-			carray[i] = other.m_string[i];
-		else
-			carray[i] = m_string[i - other.Length()];
-	}
-
-	MyString ms = MyString(carray);
-	return ms;
-}
-
 const char* MyString::Return()
 {
 	return m_string;
