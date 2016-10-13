@@ -13,7 +13,7 @@ int main()
 	cout <<"the length of the first string is: " << s.Length() << endl;
 	cout << s.Compare(other) << endl;
 	std::cout <<"this is the strings being appended: " << s.Append(other).SetCStyle() << std::endl;
-	cout<<"returning as a constant char" << s.Return() << endl;
+	cout<<"returning as a constant char " << s.Return() << endl;
 	cout <<"is the string uppercase" << s.ConvertUp() << endl;
 	cout <<"is the string lowercase" << s.ConvertLow() << endl;
 	system("pause");
